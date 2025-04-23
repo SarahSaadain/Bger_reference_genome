@@ -4,3 +4,6 @@ move the correct barcodes (62 and 63) to new folder
 ```cat bc2062.fastq bc2063.fastq > Bger_hifi_all.fastq```  
 after assembly is done, convert .gfa to fasta  
 ```nohup hifiasm -o BgerKwizda.asm -t 32 Bger_hifi_all.fastq > BgerKwizda.asm.log 2>&1 &```  
+same with the phased haplotypes  
+```awk '/^S/{print ">"$2"\n"$3}' BgerKwizda.asm.bp.hap1.p_ctg.gfa > BgerKwizda.asm.bp.hap1.p_ctg.fa
+awk '/^S/{print ">"$2"\n"$3}' BgerKwizda.asm.bp.hap2.p_ctg.gfa > BgerKwizda.asm.bp.hap2.p_ctg.fa```

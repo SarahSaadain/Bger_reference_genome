@@ -8,3 +8,5 @@ after assembly is done, convert .gfa to fasta
 same with the phased haplotypes  
 ```awk '/^S/{print ">"$2"\n"$3}' BgerKwizda.asm.bp.hap1.p_ctg.gfa > BgerKwizda.asm.bp.hap1.p_ctg.fa
 awk '/^S/{print ">"$2"\n"$3}' BgerKwizda.asm.bp.hap2.p_ctg.gfa > BgerKwizda.asm.bp.hap2.p_ctg.fa```
+index
+```samtools faidx BgerKwizda.asm.bp.p_ctg.fa``` 

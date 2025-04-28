@@ -15,7 +15,7 @@ Hifiasm purges haplotig duplications by default. For inbred or homozygous genome
 after assembly is done, convert .gfa to fasta  
 ```awk '/^S/{print ">"$2"\n"$3}' BgerKwizda.asm.bp.p_ctg.gfa > BgerKwizda.asm.bp.p_ctg.fa```  
 same with the inbreed hifiasm  
-```awk '/^S/{print ">"$2"\n"$3}' BgerKwizda_inbreed.asm.bp.p_ctg.gfa > BgerKwizda_inbreed.p_ctg.fa````  
+```awk '/^S/{print ">"$2"\n"$3}' BgerKwizda_inbreed.asm.bp.p_ctg.gfa > BgerKwizda_inbreed.p_ctg.fa```  
 
 index
 ```samtools faidx BgerKwizda.asm.bp.p_ctg.fa``` 

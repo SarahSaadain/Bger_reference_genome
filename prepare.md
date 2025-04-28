@@ -17,6 +17,9 @@ after assembly is done, convert .gfa to fasta
 same with the inbreed hifiasm  
 ```awk '/^S/{print ">"$2"\n"$3}' BgerKwizda_inbreed.asm.bp.p_ctg.gfa > BgerKwizda_inbreed.p_ctg.fa```  
 
-index
+extra step that was not needed:  
+index  
 ```samtools faidx BgerKwizda.asm.bp.p_ctg.fa``` 
-awk '/^S/{print ">"$2"\n"$3}' BgerKwizda_inbreed.asm.bp.p_ctg.gfa > BgerKwizda_inbreed.p_ctg.fa
+
+check assembly stats with quast  
+```awk '/^S/{print ">"$2"\n"$3}' BgerKwizda_inbreed.asm.bp.p_ctg.gfa > BgerKwizda_inbreed.p_ctg.fa```  
